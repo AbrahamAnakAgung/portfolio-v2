@@ -1,0 +1,132 @@
+:root {
+  --color-primary: #f5b4c5;
+  --color-primary-mute: #75565e;
+  --color-primary-bright: #f76a8f;
+  --color-primary-dark: #753244;
+  --color-primary-mute-light: #c28d9b;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-size: 1.8rem;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* global class */
+
+.container {
+  margin: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.link:link,
+.link:visited {
+  color: var(--color-primary-mute);
+}
+
+.link:hover,
+.link:active {
+  color: var(--color-primary-bright);
+}
+
+/* hero section */
+
+.hero {
+  padding: 1rem;
+}
+
+.hero-text {
+  padding-top: 2rem;
+}
+
+.svg-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.svg-hello {
+  width: 60%;
+}
+
+.hero-hello {
+  font-size: 3.2rem;
+  font-family: "Oleo Script", cursive;
+}
+
+.hero-name {
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+/* BOOKS */
+.book-wrapper {
+  opacity: 1;
+  transform: translateX(2rem);
+}
+
+.book {
+  padding-left: 2rem;
+}
+
+.book-ul {
+  margin: 0;
+  padding: 0;
+}
+
+.book-list {
+  background: linear-gradient(
+    to right,
+    var(--color-primary-mute-light) 0,
+    var(--color-primary-mute-light) 5%,
+    var(--color-primary-bright) 4%,
+    var(--color-primary-bright) 96%,
+    var(--color-primary-mute-light) 95%
+  );
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: inline-block;
+  padding: 1.2rem 0.7rem;
+  position: relative;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.book-list::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 34px;
+  width: 40%;
+  height: calc(100% - 2px);
+  background-color: var(--color-primary-dark);
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+.book-shelves {
+  height: 15px;
+  background: var(--color-primary-mute-light);
+  position: relative;
+  margin-top: -4px;
+}
+
+.book-shelves::before {
+  content: "";
+  position: absolute;
+  background: var(--color-primary-mute);
+  width: 100%;
+  height: 30px;
+  top: 14px;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+}
